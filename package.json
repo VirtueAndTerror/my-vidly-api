@@ -1,0 +1,29 @@
+{
+  "name": "my-first-express-app",
+  "version": "1.0.0",
+  "description": "A beginner-friendly Express.js REST API project following Mosh Hamedani's Node.js tutorial.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "express",
+    "nodejs",
+    "web",
+    "api",
+    "rest",
+    "backend",
+    "tutorial"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^4.1.1",
+    "debug": "^4.4.1",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "joi": "^18.0.1",
+    "morgan": "^1.10.1"
+  }
+}

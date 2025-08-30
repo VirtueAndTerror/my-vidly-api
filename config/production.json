@@ -1,0 +1,7 @@
+{
+  "name": "My Express App - Production",
+  "mail": {
+    "host": "smtp.prodmail.com",
+    "port": 465
+  }
+}
