@@ -1,5 +1,5 @@
 {
   "name": "Vidly - Default",
   "jwtPrivateKey": "",
-  "db": "mongodb://localhost/playground"
+  "db": "mongodb://localhost/my-vidly-api"
 }
