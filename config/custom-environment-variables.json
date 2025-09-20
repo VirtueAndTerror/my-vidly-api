@@ -2,5 +2,6 @@
   "mail": {
     "host": "app_mail_server",
     "password": "app_password"
-  }
+  },
+  "jwtPrivateKey": "vidly_jwtPrivateKey"
 }

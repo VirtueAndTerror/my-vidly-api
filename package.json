@@ -1,11 +1,12 @@
 {
-  "name": "my-first-express-app",
+  "name": "my-vidly-app",
   "version": "1.0.0",
   "description": "A beginner-friendly Express.js REST API project following Mosh Hamedani's Node.js tutorial.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "test": "jest --verbose --coverage"
   },
   "keywords": [
     "express",
@@ -19,11 +20,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "config": "^4.1.1",
-    "debug": "^4.4.1",
     "express": "^5.1.0",
     "helmet": "^8.1.0",
     "joi": "^18.0.1",
-    "morgan": "^1.10.1"
+    "jsonwebtoken": "^9.0.2",
+    "moment": "^2.30.1",
+    "mongoose": "^8.18.0",
+    "morgan": "^1.10.1",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "jest": "^30.1.3",
+    "supertest": "^7.1.4"
   }
 }

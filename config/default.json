@@ -1,3 +1,5 @@
 {
-  "name": "My Express App"
+  "name": "Vidly - Default",
+  "jwtPrivateKey": "",
+  "db": "mongodb://localhost/playground"
 }
