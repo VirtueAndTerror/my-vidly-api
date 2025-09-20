@@ -7,14 +7,16 @@ const admin = require('../middleware/admin');
 
 // Get all movies
 router.get('/', async (req, res) => {
-  const movies = await Movie.find().sort('title');
+  const movies = await Movie.find().select('-__v').sort('title');
   res.send(movies);
 });
 
 // Get a specific movie by ID
 router.get('/:id', validateObjectId, async (req, res) => {
   const movie = await Movie.findById(req.params.id);
-  if (!movie) return res.status(404).send('Movie not found');
+  if (!movie)
+    return res.status(404).send('No movie with the given ID has been found');
+
   res.send(movie);
 });
 
@@ -66,7 +68,8 @@ router.put('/:id', validateObjectId, async (req, res) => {
 router.delete('/:id', [auth, admin], async (req, res) => {
   const movie = await Movie.findByIdAndDelete(req.params.id);
 
-  if (!movie) return res.status(404).send('Movie not found.');
+  if (!movie)
+    return res.status(404).send('No movie with the given ID has been found');
 
   res.send(movie);
 });

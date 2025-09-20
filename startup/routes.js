@@ -14,7 +14,6 @@ const returns = require('../routes/returns');
 
 module.exports = function (app) {
   // Middleware - Operates in the Request Processing Pipeline
-  app.use(helmet()); // For setting various HTTP headers for app security
   app.use(express.json()); // to parse incoming requests with JSON payloads
 
   app.use('/', home);

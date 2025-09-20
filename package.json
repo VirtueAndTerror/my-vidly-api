@@ -1,5 +1,5 @@
 {
-  "name": "my-vidly-app",
+  "name": "my-vidly-api",
   "version": "1.0.0",
   "description": "A beginner-friendly Express.js REST API project following Mosh Hamedani's Node.js tutorial.",
   "main": "index.js",
@@ -8,19 +8,26 @@
     "dev": "nodemon index.js",
     "test": "jest --verbose --coverage"
   },
+  "engines": {
+    "node": "20.10.0"
+  },
   "keywords": [
     "express",
     "nodejs",
-    "web",
+    "mongodb",
     "api",
     "rest",
     "backend",
-    "tutorial"
+    "tutorial",
+    "integration",
+    "unit",
+    "test"
   ],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^6.0.0",
+    "compression": "^1.8.1",
     "config": "^4.1.1",
     "express": "^5.1.0",
     "helmet": "^8.1.0",
