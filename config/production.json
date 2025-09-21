@@ -1,8 +1,4 @@
 {
   "name": "My Express App - Production",
-  "mail": {
-    "host": "smtp.prodmail.com",
-    "port": 465
-  },
-  "db": "vidly_db"
+  "db": "VIDLY_MONGO_URI"
 }

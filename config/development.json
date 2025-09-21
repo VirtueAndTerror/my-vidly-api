@@ -1,7 +1,3 @@
 {
-  "name": "My Express App - Development",
-  "mail": {
-    "host": "smtp.devmail.com",
-    "port": 587
-  }
+  "name": "My Express App - Development"
 }
