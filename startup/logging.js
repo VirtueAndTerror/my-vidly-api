@@ -11,14 +11,17 @@ module.exports = function () {
     }),
     new winston.transports.File({
       filename: 'uncaughtExceptions.log',
-      format: winston.format.combine(winston.format.prettyPrint()),
+      format: winston.format.prettyPrint(),
     })
   );
 
   // General Logging
   winston.add(
     new winston.transports.Console({
-      format: winston.format.simple(),
+      format: winston.format.combine(
+        winston.format.prettyPrint(),
+        winston.format.colorize()
+      ),
     })
   );
 

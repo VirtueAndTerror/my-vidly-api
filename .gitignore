@@ -7,3 +7,4 @@ uncaughtExceptions.log
 
 #tests
 coverage/
+.vercel
