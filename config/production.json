@@ -1,5 +1,5 @@
 {
   "name": "My Express App - Production",
-  "jwtPrivateKey": "",
-  "db": ""
+  "jwtPrivateKey": "vidly_jwtPrivateKey",
+  "db": "VIDLY_MONGO_URI"
 }
