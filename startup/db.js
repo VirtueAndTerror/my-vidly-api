@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const config = require('config');
 
 module.exports = function () {
-  const db = process.env.DB || config.get('db');
+  const db = process.env.VIDLY_MONGO_URI || config.get('db');
   // Connect to MongoDB
   mongoose
     .connect(db)

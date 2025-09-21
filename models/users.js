@@ -34,7 +34,7 @@ userSchema.methods.generateAuthToken = function () {
   const token = jwt.sign(
     // keyword 'this' - References the calling function
     { _id: this._id, isAdmin: this.isAdmin },
-    config.get('jwtPrivateKey')
+    process.env.VIDLY_JWT_PRIVATE_KEY || config.get('jwtPrivateKey')
   );
   return token;
 };
