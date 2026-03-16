@@ -1,4 +1,5 @@
 {
+  "_comment": "This file handles env vars mapping",
   "jwtPrivateKey": "vidly_jwtPrivateKey",
   "db": "VIDLY_MONGO_URI"
 }
