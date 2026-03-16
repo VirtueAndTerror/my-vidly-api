@@ -3,5 +3,6 @@
     "index.js": {
       "includeFiles": "config/**"
     }
-  }
+  },
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.js" }]
 }

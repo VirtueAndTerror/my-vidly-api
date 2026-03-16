@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const winston = require('winston');
 
 require('./startup/config')(app);
 require('./startup/db')();
@@ -8,17 +7,14 @@ require('./startup/logging')();
 require('./startup/routes')(app);
 require('./startup/prod')(app);
 
-const PORT = process.env.PORT || 3000;
+// Serve static files from 'public' directory.
+app.use(express.static('public'));
 
-app.use(express.static('public')); // Serve static files from 'public' directory
+// Only start the server locally, not on Vercel.
+if (process.env.NODE_ENV !== 'production') {
+  const PORT = process.env.PORT || 3000;
 
-const server = app.listen(PORT, () => {
-  const address = server.address();
-  let host = address?.address;
-  if (host === '::' || host === '0.0.0.0') host = 'localhost';
-  winston.info(`Server is running on http://${host}:${address?.port}`);
-});
+  app.listen(PORT, () => console.info(`Listening on port ${PORT}...`));
+}
 
-module.exports = server;
-
-// module.exports = app;
+module.exports = app;
