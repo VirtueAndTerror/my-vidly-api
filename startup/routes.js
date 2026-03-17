@@ -1,5 +1,6 @@
 const express = require('express');
 const error = require('../middleware/error');
+const cors = require('cors');
 
 // Routers
 const auth = require('../routes/auth');
@@ -14,6 +15,7 @@ const returns = require('../routes/returns');
 module.exports = function (app) {
   // Middleware - Operates in the Request Processing Pipeline
   app.use(express.json()); // to parse incoming requests with JSON payloads
+  app.use(cors());
 
   app.use('/', home);
   app.use('/api/genres', genres);
